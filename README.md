@@ -19,7 +19,7 @@
         nautilus \
         gedit \
         xterm \
-        sudo (Doesn't work because of user is given randomly by heroku) \
+        sudo - Doesn't work because of user is given randomly by heroku \
 	firefox \
         bash \
         net-tools \
