@@ -1,0 +1,10 @@
+{
+  "name": "VNC快速部署",
+  "description": "Deploy VNC to Heroku.",
+  "keywords": ["VNC", "Docker"],
+  "env": {
+  },
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }
