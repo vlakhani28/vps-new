@@ -22,7 +22,7 @@ RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted
 RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted' >> /etc/apt/sources.list
 RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security universe' >> /etc/apt/sources.list
 RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse' >> /etc/apt/sources.list
-RUN apt-get update && apt-get install software-properties-common
+RUN apt-get update && apt-get install -y --no-install-recommends software-properties-common
 RUN add-apt-repository ppa:obsproject/obs-studio \
      && apt-get update && apt-get install -y obs-studio
 
