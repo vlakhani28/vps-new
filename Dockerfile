@@ -23,8 +23,8 @@ RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted
 RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security universe' >> /etc/apt/sources.list
 RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse' >> /etc/apt/sources.list
 
-RUN sudo add-apt-repository ppa:obsproject/obs-studio \
-     && sudo apt-get update && sudo apt-get install -y obs-studio
+RUN add-apt-repository ppa:obsproject/obs-studio \
+     && apt-get update && apt-get install -y obs-studio
 
 RUN set -ex; \
     apt-get update \
