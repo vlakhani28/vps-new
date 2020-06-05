@@ -2,6 +2,28 @@ FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse' > /etc/apt/sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic main restricted' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic-updates main restricted' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic universe' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic-updates multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse' >> /etc/apt/sources.list
+RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted' >> /etc/apt/sources.list
+RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security universe' >> /etc/apt/sources.list
+RUN echo 'deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse' >> /etc/apt/sources.list
+
+
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -57,8 +79,6 @@ RUN adduser ubuntu
 RUN echo "ubuntu:ubuntu" | chpasswd && \
     adduser ubuntu sudo && \
     sudo usermod -a -G sudo ubuntu
-
-RUN wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && apt install ./teamviewer_amd64.deb
 
 RUN sudo add-apt-repository ppa:obsproject/obs-studio \
      && sudo apt-get update && sudo apt-get install -y obs-studio
