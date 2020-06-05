@@ -35,7 +35,7 @@ RUN set -ex; \
         gedit \
         xterm \
         sudo \
-	    firefox \
+	falkon \
         bash \
         net-tools \
         novnc \
@@ -47,8 +47,9 @@ RUN set -ex; \
         supervisor \
         net-tools \
         curl \
+	inetutils-ping \
         git \
-	    wget \
+	wget \
         libtasn1-3-bin \
         libglu1-mesa \
         libqt5webkit5 \
