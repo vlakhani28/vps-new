@@ -1,2 +1,2 @@
 #!/bin/bash
-websockify --web /usr/share/novnc $PORT localhost:5900
+websockify --web /usr/share/novnc $PORT localhost:5901
