@@ -66,7 +66,7 @@ RUN sudo add-apt-repository ppa:obsproject/obs-studio \
 COPY . /app
 
 RUN chmod +x /app/conf.d/websockify.sh
-RUN chmod +x /app/run.sh\   
+RUN chmod +x /app/run.sh
 USER ubuntu
 
 CMD ["/app/run.sh"]
