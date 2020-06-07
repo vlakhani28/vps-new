@@ -7,9 +7,8 @@ RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe 
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
-        ubuntu-desktop \
+        xorg \
         unity-lens-applications \
-        gnome-panel \
         metacity \
         nautilus \
         gedit \
@@ -20,8 +19,7 @@ RUN set -ex; \
         novnc \
         socat \
         x11vnc \
-        gnome-panel \
-        gnome-terminal \
+        xfce4 \
         xvfb \
         supervisor \
         net-tools \
