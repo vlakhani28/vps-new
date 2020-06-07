@@ -64,9 +64,6 @@ COPY . /app
 
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
-USER ubuntu
-
-CMD ["/app/run.sh"]
 
 RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse' > /etc/apt/sources.list
 RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse' >> /etc/apt/sources.list
@@ -94,5 +91,9 @@ RUN set -ex; \
     && apt-get install -y --no-install-recommends \
         falkon
         
-        
+USER ubuntu
+
+CMD ["/app/run.sh"]
+
+
         
