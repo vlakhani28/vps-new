@@ -55,12 +55,6 @@ ENV HOME=/root \
     RUN_XTERM=yes \
     RUN_UNITY=yes
 
-RUN adduser ubuntu
-
-RUN echo "ubuntu:ubuntu" | chpasswd && \
-    adduser ubuntu sudo && \
-    sudo usermod -a -G sudo ubuntu
-
 RUN sudo add-apt-repository ppa:obsproject/obs-studio \
      && sudo apt-get update && sudo apt-get install -y obs-studio
 
@@ -68,7 +62,7 @@ COPY . /app
 
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
-USER ubuntu
+
 RUN echo xfce4-session >~/.xsession
 CMD ["/app/run.sh"]
 
