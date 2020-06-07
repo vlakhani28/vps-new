@@ -7,11 +7,7 @@ RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe 
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
-        ubuntu-desktop \
         xorg \
-        unity-lens-applications \
-	gnome-panel \
-        metacity \
         nautilus \
         gedit \
         xterm \
@@ -20,21 +16,12 @@ RUN set -ex; \
         net-tools \
         novnc \
         socat \
-        x11vnc \
-	gnome-terminal \
+        tightvncserver \
         xfce4 \
-        xvfb \
         supervisor \
-        net-tools \
         curl \
         git \
 	wget \
-        libtasn1-bin \
-        libglu1-mesa \
-        libqt5webkit5 \
-        libqt5x11extras5 \
-        qml-module-qtquick-controls \
-        qml-module-qtquick-dialogs \
         g++ \
         ssh \
         terminator \
@@ -43,20 +30,6 @@ RUN set -ex; \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
-
-ENV HOME=/root \
-    DEBIAN_FRONTEND=noninteractive \
-    LANG=en_US.UTF-8 \
-    LANGUAGE=en_US.UTF-8 \
-    LC_ALL=C.UTF-8 \
-    DISPLAY=:0.0 \
-    DISPLAY_WIDTH=1366 \
-    DISPLAY_HEIGHT=768 \
-    RUN_XTERM=yes \
-    RUN_UNITY=yes
-
-RUN sudo add-apt-repository ppa:obsproject/obs-studio \
-     && sudo apt-get update && sudo apt-get install -y obs-studio
 
 COPY . /app
 
