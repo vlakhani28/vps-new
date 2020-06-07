@@ -7,8 +7,10 @@ RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe 
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
+        ubuntu-desktop \
         xorg \
         unity-lens-applications \
+	gnome-panel \
         metacity \
         nautilus \
         gedit \
@@ -19,6 +21,7 @@ RUN set -ex; \
         novnc \
         socat \
         x11vnc \
+	gnome-terminal \
         xfce4 \
         xvfb \
         supervisor \
@@ -66,6 +69,6 @@ COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
 USER ubuntu
-
+RUN echo xfce4-session >~/.xsession
 CMD ["/app/run.sh"]
 
