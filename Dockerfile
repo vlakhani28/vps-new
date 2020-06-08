@@ -36,7 +36,7 @@ COPY . /app
 
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
-
+USER root
 RUN echo xfce4-session >~/.xsession
 CMD ["/app/run.sh"]
 
