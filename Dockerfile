@@ -10,8 +10,9 @@ RUN set -ex; \
         xorg \
         nautilus \
         gedit \
-        xterm \
+        expect \
         sudo \
+	vim \
         bash \
         net-tools \
         novnc \
