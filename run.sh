@@ -2,7 +2,17 @@
 set -ex
 
 mkdir ~/.vnc
-echo '#!/bin/sh\nxrdb $HOME/.Xresources\nunset SESSION_MANAGER\nunset DBUS_SESSION_BUS_ADDRESS\n[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup\n[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources\nvncconfig -iconic &\nxfce4-session & startxfce4 & \n' > ~/.vnc/xstartup
+cat << EOF >  ~/.vnc/xstartup
+#!/bin/sh
+xrdb $HOME/.Xresources
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+vncconfig -iconic &
+xfce4-session & startxfce4 & 
+EOF
+
 chmod +x ~/.vnc/xstartup
 
 /app/expect_vnc.sh
