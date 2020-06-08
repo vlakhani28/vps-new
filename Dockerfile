@@ -34,7 +34,6 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
-RUN groupadd ubuntu && useradd -d /home/ubuntu -s /bin/bash -g ubuntu -m ubuntu
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/expect_vnc.sh
@@ -46,9 +45,6 @@ RUN set -ex; \
     && apt-get install -y --no-install-recommends \
         google-chrome-stable
 
-
-USER ubuntu
-ENV USER=ubuntu
 RUN echo xfce4-session >~/.xsession
 CMD ["/app/run.sh"]
 
