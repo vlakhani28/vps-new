@@ -18,7 +18,7 @@ RUN set -ex; \
         net-tools \
         novnc \
         socat \
-        tightvncserver \
+        vnc4server \
         xfce4 \
         supervisor \
         curl \
