@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
-
-mkdir ~/.vnc
+/app/expect_vnc.sh
+mkdir -p ~/.vnc
 cat << EOF >  ~/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
@@ -12,9 +12,7 @@ unset DBUS_SESSION_BUS_ADDRESS
 vncconfig -iconic &
 xfce4-session & startxfce4 & 
 EOF
-
 chmod +x ~/.vnc/xstartup
-
-/app/expect_vnc.sh
+vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
 
 exec supervisord -c /app/supervisord.conf
