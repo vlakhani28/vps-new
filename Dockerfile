@@ -7,6 +7,7 @@ RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe 
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
+        dbus-x11 \
         xorg \
         nautilus \
         gedit \
