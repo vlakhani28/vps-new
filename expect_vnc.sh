@@ -1,5 +1,5 @@
 #!/usr/bin/expect -f
-spawn vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
+spawn vncpasswd
 expect  "*word:*"
 send "demo2020\n"
 expect  "*Verify:*"
