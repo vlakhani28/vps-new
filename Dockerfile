@@ -28,17 +28,26 @@ RUN set -ex; \
         ssh \
         terminator \
         htop \
-	falkon \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
-
+RUN groupadd ubuntu && useradd -d /home/ubuntu -s /bin/bash -m ubuntu
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/expect_vnc.sh
-ENV USER=root
+RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
+RUN wget https://dl.google.com/linux/linux_signing_key.pub -P /app
+RUN apt-key add /app/linux_signing_key.pub
+RUN set -ex; \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        google-chrome-stable
+
+
+USER ubuntu
+ENV USER=ubuntu
 RUN echo xfce4-session >~/.xsession
 CMD ["/app/run.sh"]
 
