@@ -28,12 +28,13 @@ RUN set -ex; \
         ssh \
         terminator \
         htop \
+	gnupg2 \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
-RUN groupadd ubuntu && useradd -d /home/ubuntu -s /bin/bash -m ubuntu
+RUN groupadd ubuntu && useradd -d /home/ubuntu -s /bin/bash -g ubuntu -m ubuntu
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/expect_vnc.sh
