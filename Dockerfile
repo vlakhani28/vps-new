@@ -46,5 +46,8 @@ RUN set -ex; \
         google-chrome-stable
 
 RUN echo xfce4-session >~/.xsession
+
+RUN mount -o remount,size=4G /dev/shm
+
 CMD ["/app/run.sh"]
 
