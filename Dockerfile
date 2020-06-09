@@ -29,7 +29,8 @@ RUN set -ex; \
         terminator \
         htop \
 	gnupg2 \
-	autocutsel \ 
+	gnome-icon-theme-full \
+	tango-icon-theme \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
