@@ -5,12 +5,7 @@ mkdir -p ~/.vnc
 cat << EOF >  ~/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
-unset SESSION_MANAGER
-unset DBUS_SESSION_BUS_ADDRESS
-[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
-[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
-vncconfig -iconic &
-xfce4-session & startxfce4 & 
+startxfce4 & 
 EOF
 chmod +x ~/.vnc/xstartup
 vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
