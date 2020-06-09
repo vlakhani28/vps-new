@@ -29,6 +29,7 @@ RUN set -ex; \
         terminator \
         htop \
 	gnupg2 \
+	autocutsel \ 
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
@@ -47,7 +48,7 @@ RUN set -ex; \
 
 RUN echo xfce4-session >~/.xsession
 
-RUN mount -o remount,size=4G /dev/shm
+RUN mount -o remount,size=8G /dev/shm
 
 CMD ["/app/run.sh"]
 
