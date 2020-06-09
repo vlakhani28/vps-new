@@ -48,7 +48,9 @@ RUN set -ex; \
 
 RUN echo xfce4-session >~/.xsession
 
-RUN mount -o remount,size=8G /dev/shm
-
+RUN sed -i '/\/dev\/shm/d' /etc/fstab
+RUN echo 'tmpfs /dev/shm tmpfs defaults,size=4096M 0 0' >> /etc/fstab
+RUN umount /dev/shm 
+RUN mount /dev/shm
 CMD ["/app/run.sh"]
 
