@@ -13,6 +13,6 @@ vncconfig -iconic &
 xfce4-session & startxfce4 & 
 EOF
 chmod +x ~/.vnc/xstartup
-vncserver -depth 32 -pixelformat rgb888 -geometry 800x600 :1
+vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
 
 exec supervisord -c /app/supervisord.conf
