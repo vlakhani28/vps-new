@@ -48,8 +48,5 @@ RUN set -ex; \
 
 RUN echo xfce4-session >~/.xsession
 
-RUN sed -i '/\/dev\/shm/d' /etc/fstab
-RUN echo 'tmpfs /dev/shm tmpfs defaults,size=4096M 0 0' >> /etc/fstab
-
 CMD ["/app/run.sh"]
 
