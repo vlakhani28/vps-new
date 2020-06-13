@@ -10,7 +10,8 @@ EOF
 chmod +x ~/.vnc/xstartup
 vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
 
-cat << EOF >  '/Desktop/Google Chrome.desktop'
+mkdir -p /Desktop
+cat << EOF >  /Desktop/Chrome.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
