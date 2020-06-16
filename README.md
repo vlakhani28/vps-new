@@ -11,6 +11,7 @@
   - Support Chinese Language and Pinyin input method, check Readme.txt in Desktop
   - Use keyboard Shift button to switch input method
   - Modified from megatron0000/heroku-vnc
+  - Password: demo2020
 
 ### Installation
 
