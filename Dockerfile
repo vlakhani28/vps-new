@@ -13,7 +13,7 @@ RUN set -ex; \
         gedit \
         expect \
         sudo \
-	vim \
+        vim \
         bash \
         net-tools \
         novnc \
@@ -23,12 +23,15 @@ RUN set -ex; \
         supervisor \
         curl \
         git \
-	wget \
+        wget \
         g++ \
         ssh \
         terminator \
         htop \
-	gnupg2 \
+        gnupg2 \
+	locales \
+	xfonts-intl-chinese \
+	fonts-wqy-microhei \  
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
@@ -48,4 +51,3 @@ RUN set -ex; \
 RUN echo xfce4-session >~/.xsession
 
 CMD ["/app/run.sh"]
-
