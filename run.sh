@@ -35,7 +35,8 @@ EOF
 
 cat << EOF >  /root/Desktop/Readme.txt
 Step 1: Excute Swicth_to_Chinese_input.sh on Deskop to switch input method.
-Step 2: No it can support Chinese, Enjoy!
+Step 2: Select 'Input Method', then click add button, choose Chinese and Pinyin icon.
+Step 3: Now it can support Chinese, Enjoy!
 EOF
 
 chmod +x /root/Desktop/Chrome.desktop
