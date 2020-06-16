@@ -5,7 +5,6 @@ mkdir -p ~/.vnc ~/.config/xfce4
 tar -xvf /app/panel.tar -C ~/.config/xfce4
 rm -rf /usr/share/icons/Adwaita
 cp -r /usr/share/icons/Humanity-Dark /usr/share/icons/Adwaita
-im-config -s ibus
 cat << EOF >  ~/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
@@ -28,5 +27,17 @@ Terminal=false
 StartupNotify=true
 EOF
 
+cat << EOF >  /root/Desktop/Swicth_to_Chinese_input.sh
+#!/bin/bash
+im-config -s ibus
+ibus-setup
+EOF
+
+cat << EOF >  /root/Desktop/Readme.txt
+Step 1: Excute Swicth_to_Chinese_input.sh on Deskop to switch input method.
+Step 2: No it can support Chinese, Enjoy!
+EOF
+
 chmod +x /root/Desktop/Chrome.desktop
+chmod +x /root/Desktop/Swicth_to_Chinese_input.sh
 exec supervisord -c /app/supervisord.conf
