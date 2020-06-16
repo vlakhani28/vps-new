@@ -13,8 +13,8 @@ EOF
 chmod +x ~/.vnc/xstartup
 vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 :1
 
-mkdir -p /root/Desktop
-cat << EOF >  /root/Desktop/Chrome.desktop
+mkdir -p /Desktop
+cat << EOF >  /Desktop/Chrome.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -27,18 +27,18 @@ Terminal=false
 StartupNotify=true
 EOF
 
-cat << EOF >  /root/Desktop/Swicth_to_Chinese_input.sh
+cat << EOF >  /Desktop/Swicth_to_Chinese_input.sh
 #!/bin/bash
 im-config -s ibus
 ibus-setup
 EOF
 
-cat << EOF >  /root/Desktop/Readme.txt
+cat << EOF >  /Desktop/Readme.txt
 Step 1: Excute Swicth_to_Chinese_input.sh on Deskop to switch input method.
-Step 2: Select 'Input Method', then click add button, choose Chinese and Pinyin icon.
+Step 2: Select 'Input Method', then click add button, choose Chinese and Pinyin icon to add.
 Step 3: Now it can support Chinese, Enjoy!
 EOF
 
-chmod +x /root/Desktop/Chrome.desktop
-chmod +x /root/Desktop/Swicth_to_Chinese_input.sh
+chmod +x /Desktop/Chrome.desktop
+chmod +x /Desktop/Swicth_to_Chinese_input.sh
 exec supervisord -c /app/supervisord.conf
