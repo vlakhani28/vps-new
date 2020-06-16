@@ -13,12 +13,19 @@
   - Modified from megatron0000/heroku-vnc
   - Password: demo2020
   - Display resolution setting command:
+  
       xrandr -s 1440x900
+      
       xrandr -s 800x600
+      
       xrandr -s 1024x768
+      
       xrandr -s 1200x500
+      
       xrandr -s 1366x768
+      
       xrandr -s 1920x1080
+      
 
 ### Installation
 
