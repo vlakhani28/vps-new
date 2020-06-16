@@ -8,10 +8,11 @@ cp -r /usr/share/icons/Humanity-Dark /usr/share/icons/Adwaita
 cat << EOF >  ~/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
+vncconfig -iconic &
 startxfce4 &
 EOF
 chmod +x ~/.vnc/xstartup
-vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 -geometry 800x600 -geometry 1024x768 -geometry 1200x500 -geometry 1366x768 -geometry 1920x1080 :1
+vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 -geometry 800x600 -geometry 1024x768 -geometry 1360x620 -geometry 1366x768 -geometry 1920x1080 :1
 
 mkdir -p /Desktop
 cat << EOF >  /Desktop/Chrome.desktop
