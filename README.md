@@ -8,6 +8,9 @@
   - Lite Desktop xfce4
   - Easy to use
   - Can be easily customized
+  - Support Chinese Language and Pinyin input method, check Readme.txt in Desktop
+  - Use keyboard Shift button to switch input method
+  - Modified from megatron0000/heroku-vnc
 
 ### Installation
 
