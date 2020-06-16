@@ -42,7 +42,6 @@ RUN set -ex; \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
-RUN im-config -s ibus
 
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
