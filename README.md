@@ -22,7 +22,7 @@
       
       xrandr -s 1200x500
       
-      xrandr -s 1366x768
+      xrandr -s 1360x620
       
       xrandr -s 1920x1080
       
