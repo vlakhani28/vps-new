@@ -38,6 +38,7 @@ RUN set -ex; \
 	ibus-gtk \
 	ibus-gtk3 \
 	ibus-qt4 \
+	libcurl4-openssl-dev \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
