@@ -11,7 +11,7 @@ xrdb $HOME/.Xresources
 startxfce4 &
 EOF
 chmod +x ~/.vnc/xstartup
-vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 -geometry 800x600 :1
+vncserver -depth 32 -pixelformat rgb888 -geometry 1440x900 -geometry 800x600 -geometry 1024x768 -geometry 1200x500 -geometry 1366x768 -geometry 1920x1080 :1
 
 mkdir -p /Desktop
 cat << EOF >  /Desktop/Chrome.desktop
