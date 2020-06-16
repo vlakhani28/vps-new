@@ -5,7 +5,6 @@ mkdir -p ~/.vnc ~/.config/xfce4
 tar -xvf /app/panel.tar -C ~/.config/xfce4
 rm -rf /usr/share/icons/Adwaita
 cp -r /usr/share/icons/Humanity-Dark /usr/share/icons/Adwaita
-dpkg-reconfigure locales
 cat << EOF >  ~/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
