@@ -8,7 +8,6 @@ RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
         dbus-x11 \
-        xorg \
         nautilus \
         gedit \
         expect \
@@ -18,7 +17,8 @@ RUN set -ex; \
         net-tools \
         novnc \
         socat \
-        vnc4server \
+        x11vnc \
+	xvfb \
         xfce4 \
         supervisor \
         curl \
@@ -38,7 +38,6 @@ RUN set -ex; \
 	ibus-gtk \
 	ibus-gtk3 \
 	ibus-qt4 \
-	libcurl4-openssl-dev \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
