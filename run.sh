@@ -19,6 +19,19 @@ Terminal=false
 StartupNotify=true
 EOF
 
+cat << EOF >  /Desktop/AnyDesk.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AnyDesk
+Comment=
+Exec=/usr/bin/anydesk
+Icon=anydesk
+Path=
+Terminal=false
+StartupNotify=true
+EOF
+
 cat << EOF >  /Desktop/Swicth_to_Chinese_input.sh
 #!/bin/bash
 im-config -s ibus
