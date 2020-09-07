@@ -6,31 +6,31 @@ rm -rf /usr/share/icons/Adwaita
 cp -r /usr/share/icons/Humanity-Dark /usr/share/icons/Adwaita
 
 mkdir -p /Desktop
-cat << EOF >  /Desktop/Chrome.desktop
+cat << EOF >  /Desktop/Chromium.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Google Chrome
+Name=Chromium
 Comment=Access the Internet
-Exec=/usr/bin/google-chrome-stable --no-sandbox --disable-dev-shm-usage
-Icon=google-chrome
+Exec=/usr/bin/chromium-browser --no-sandbox --disable-dev-shm-usage
+Icon=chromium-browser
 Path=
 Terminal=false
 StartupNotify=true
 EOF
 
-cat << EOF >  /Desktop/AnyDesk.desktop
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=AnyDesk
-Comment=
-Exec=/usr/bin/anydesk
-Icon=anydesk
-Path=
-Terminal=false
-StartupNotify=true
-EOF
+#cat << EOF >  /Desktop/AnyDesk.desktop
+#[Desktop Entry]
+#Version=1.0
+#Type=Application
+#Name=AnyDesk
+#Comment=
+#Exec=/usr/bin/anydesk
+#Icon=anydesk
+#Path=
+#Terminal=false
+#StartupNotify=true
+#EOF
 
 cat << EOF >  /Desktop/Swicth_to_Chinese_input.sh
 #!/bin/bash
@@ -44,6 +44,6 @@ Step 2: Select 'Input Method', then click add button, choose Chinese and Pinyin 
 Step 3: Now it can support Chinese, Enjoy!
 EOF
 
-chmod +x /Desktop/Chrome.desktop
+chmod +x /Desktop/Chromium.desktop
 chmod +x /Desktop/Swicth_to_Chinese_input.sh
 exec supervisord -c /app/supervisord.conf
