@@ -27,8 +27,10 @@ RUN set -ex; \
 	pulseaudio \
         wget \
         g++ \
+	unzip \
         ssh \
 	chromium-browser \
+	firefox \
         terminator \
         htop \
         gnupg2 \
