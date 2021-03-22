@@ -13,6 +13,7 @@ RUN set -ex; \
         expect \
         sudo \
         vim \
+	obs-studio \
         bash \
         net-tools \
         novnc \
@@ -23,6 +24,7 @@ RUN set -ex; \
         supervisor \
         curl \
         git \
+	pulseaudio \
         wget \
         g++ \
         ssh \
