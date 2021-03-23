@@ -80,14 +80,6 @@ RUN export UNAME=$UNAME UID=1000 GID=1000 && \
     chown ${UID}:${GID} -R /home/${UNAME} && \
     gpasswd -a ${UNAME} audio
 
-COPY pulse-client.conf /etc/pulse/client.conf
-
-USER $UNAME
-ENV HOME /home/pacat
-
-# run
-CMD ["pacat", "-vvvv", "/dev/urandom"]	
-
 RUN echo xfce4-session >~/.xsession
 RUN echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" 
 
