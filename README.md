@@ -42,3 +42,5 @@ Click Deploy link in the top
 You will be asked for the application name. After you enter the application name, everything will be done automatically. If there is no error, you can access your app at: https://yourappname.herokapp.com
 
 
+I JUST EDITIED SOME CODES I AM NOT A OWNER OF THIS FILES
+~KING REMIX
