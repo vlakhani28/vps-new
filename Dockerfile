@@ -14,6 +14,7 @@ RUN set -ex; \
         sudo \
         vim \
 	obs-studio \
+	vlc \
         bash \
         net-tools \
         novnc \
