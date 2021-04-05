@@ -64,9 +64,8 @@ RUN set -ex; \
         google-chrome-stable \
 	anydesk
 
-RUN sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 RUN apt-get install ffmpeg
-RUN sudo add-apt-repository ppa:obsproject/obs-studio
+RUN add-apt-repository ppa:obsproject/obs-studio
 RUN apt-get install obs-studio
 RUN apt-get upgrade
 
