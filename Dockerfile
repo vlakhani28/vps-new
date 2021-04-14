@@ -12,6 +12,7 @@ RUN set -ex; \
         nautilus \
         gedit \
         expect \
+	go-lang \
         sudo \
         vim \
 	vlc \
