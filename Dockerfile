@@ -51,6 +51,22 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
+RUN wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
+RUN export PATH=$PATH:/usr/local/go/bin
+
+RUN git clone https://github.com/projectdiscovery/nuclei.git; \
+cd nuclei/v2/cmd/nuclei; \
+go build; \
+mv nuclei /usr/local/bin/; \
+nuclei -version;
+
+RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx
+RUN go get github.com/tomnomnom/waybackurls
+RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
+
+
+
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
