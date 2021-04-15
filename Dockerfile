@@ -19,6 +19,7 @@ RUN set -ex; \
         novnc \
         xfce4 \
 	socat \
+	unzip \
         x11vnc \
 	xvfb \
         supervisor \
@@ -78,7 +79,7 @@ RUN wget --no-check-certificate -c https://github.com/Findomain/Findomain/releas
 RUN chmod +x findomain-linux
 
 RUN wget --no-check-certificate -c https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
-RUN tar -xzvf aquatone_*.zip
+RUN unzip aquatone_*.zip
 RUN rm aquatone_*.zip
 
 RUN wget --no-check-certificate -c https://github.com/ffuf/ffuf/releases/download/v1.2.1/ffuf_1.2.1_linux_amd64.tar.gz
