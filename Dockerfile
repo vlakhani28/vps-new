@@ -50,12 +50,8 @@ RUN wget --no-check-certificate -c https://golang.org/dl/go1.15.2.linux-amd64.ta
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
 
-RUN git clone https://github.com/projectdiscovery/nuclei.git; \
-cd nuclei/v2/cmd/nuclei; \
-go build; \
-mv nuclei /usr/local/bin/; \
-nuclei -version;
-
+#Add all commands to install a file using GO over here
+RUN go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx
 RUN go get github.com/tomnomnom/waybackurls
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
