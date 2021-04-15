@@ -52,11 +52,11 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN apt-get install -y --no-install-recommends software-properties-common
-RUN add-apt-repository ppa:longsleep/golang-backports
-RUN apt-get -y --no-install-recommends install golang-1.11-go
-RUN go version
-RUN go get -u github.com/ffuf/ffuf
+# RUN apt-get install -y --no-install-recommends software-properties-common
+# RUN add-apt-repository ppa:longsleep/golang-backports
+# RUN apt-get -y --no-install-recommends install golang-1.11-go
+# RUN go version
+# RUN go get -u github.com/ffuf/ffuf
 
 RUN git clone https://github.com/nahamsec/bbht.git
 RUN chmod +x bbht/install.sh
