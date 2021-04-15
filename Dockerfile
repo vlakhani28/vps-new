@@ -52,9 +52,8 @@ RUN set -ex; \
 RUN dpkg-reconfigure locales
 
 RUN git clone https://github.com/nahamsec/bbht.git
-RUN cd bbht
-RUN chmod +x install.sh
-RUN ./install.sh
+RUN chmod +x bbht/install.sh
+RUN ./bbht/install.sh
 
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/nuclei/releases/download/v2.3.4/nuclei_2.3.4_linux_amd64.tar.gz
 RUN tar -xzvf nuclei_*.tar.gz
