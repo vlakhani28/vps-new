@@ -51,18 +51,23 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
-RUN export PATH=$PATH:/usr/local/go/bin
+RUN git clone https://github.com/nahamsec/bbht.git
+RUN cd bbht
+RUN chmod +x install.sh
+RUN ./install.sh
 
 #Add all commands to install a file using GO over here
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/nuclei/releases/download/v2.3.4/nuclei_2.3.4_linux_amd64.tar.gz
 RUN tar -xzvf nuclei_*.tar.gz
 RUN mv nuclei /usr/local/bin/nuclei
+RUN rm nuclei_2.3.4_linux_amd64.tar.gz
+RUN rm nuclei
 
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/httpx/releases/download/v1.0.5/httpx_1.0.5_linux_amd64.tar.gz
 RUN tar -xvf httpx_*.tar.gz
 RUN mv httpx /usr/local/bin/httpx
+RUN rm httpx_1.0.5_linux_amd64.tar.gz
+RUN rm httpx
 RUN pip3 install waybackpy
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
 
