@@ -46,9 +46,10 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN wget --no-check-certificate -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
+RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar
 RUN export PATH=$PATH:/usr/local/go/bin
+go version
 
 #Add all commands to install a file using GO over here
 RUN go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
