@@ -44,7 +44,7 @@ RUN set -ex; \
 	python3-pip \
 	python-pip \
 	python3-setuptools \
-	python-setuptools 
+	python-setuptools \
 	
     && apt-get autoclean \
     && apt-get autoremove \
