@@ -8,47 +8,42 @@ RUN apt-get upgrade
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
+        dbus-x11 \
+        nautilus \
+        gedit \
+        expect \
+        sudo \
+        bash \
+        net-tools \
+        novnc \
+        xfce4 \
+	socat \
+        x11vnc \
+	xvfb \
+        supervisor \
+        curl \
+        git \
         wget \
-	git \
-# RUN set -ex; \
-#     apt-get update \
-#     && apt-get install -y --no-install-recommends \
-#         dbus-x11 \
-#         nautilus \
-#         gedit \
-#         expect \
-#         sudo \
-#         bash \
-#         net-tools \
-#         novnc \
-#         xfce4 \
-# 	socat \
-#         x11vnc \
-# 	xvfb \
-#         supervisor \
-#         curl \
-#         git \
-#         wget \
-#         g++ \
-# 	unzip \
-#         ssh \
-# 	chromium-browser \
-# 	firefox \
-#         terminator \
-#         htop \
-#         gnupg2 \
-# 	locales \
-# 	xfonts-intl-chinese \
-# 	fonts-wqy-microhei \  
-# 	ibus-pinyin \
-# 	ibus \
-# 	ibus-clutter \
-# 	ibus-gtk \
-# 	ibus-gtk3 \
-# 	ibus-qt4 \
-#     && apt-get autoclean \
-#     && apt-get autoremove \
-#     && rm -rf /var/lib/apt/lists/*
+        g++ \
+	unzip \
+        ssh \
+	chromium-browser \
+	firefox \
+        terminator \
+        htop \
+        gnupg2 \
+	locales \
+	xfonts-intl-chinese \
+	fonts-wqy-microhei \  
+	ibus-pinyin \
+	ibus \
+	ibus-clutter \
+	ibus-gtk \
+	ibus-gtk3 \
+	ibus-qt4 \
+    && apt-get autoclean \
+    && apt-get autoremove \
+    && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
 RUN wget --no-check-certificate -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
