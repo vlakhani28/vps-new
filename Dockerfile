@@ -51,7 +51,7 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN apt-get install golang
+RUN apt-get -y install golang
 RUN go version
 RUN go get -u github.com/ffuf/ffuf
 
