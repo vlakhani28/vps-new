@@ -47,7 +47,7 @@ RUN set -ex; \
 RUN dpkg-reconfigure locales
 
 RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
 RUN go version
 
