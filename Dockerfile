@@ -41,7 +41,11 @@ RUN set -ex; \
 	ibus-gtk \
 	ibus-gtk3 \
 	ibus-qt4 \
-	python-pip \
+	python3-pip \
+	python-pip
+	python3-setuptools \
+	python-setuptools
+	
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
@@ -59,7 +63,7 @@ RUN mv nuclei /usr/local/bin/nuclei
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/httpx/releases/download/v1.0.5/httpx_1.0.5_linux_amd64.tar.gz
 RUN tar -xvf httpx_*.tar.gz
 RUN mv httpx /usr/local/bin/httpx
-RUN pip install waybackpy
+RUN pip3 install waybackpy
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
 
 
