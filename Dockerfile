@@ -49,12 +49,20 @@ RUN dpkg-reconfigure locales
 RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
-RUN go version
 
 #Add all commands to install a file using GO over here
-RUN go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
-RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx
-RUN go get github.com/tomnomnom/waybackurls
+RUN git clone https://github.com/projectdiscovery/nuclei; \
+cd nuclei/v2/cmd/nuclei; \
+go build; \
+mv nuclei /usr/local/bin/; \
+nuclei -version; \
+cd;
+
+RUN wget https://github.com/projectdiscovery/httpx/releases/download/v1.0.5/
+RUN tar -xvf httpx_1.0.5_linux_amd64.tar.gz
+RUN mv httpx /usr/local/bin/httpx
+RUN httpx -h
+RUN pip install waybackpy
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
 
 
