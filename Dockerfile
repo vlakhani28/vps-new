@@ -74,8 +74,19 @@ RUN rm httpx_1.0.5_linux_amd64.tar.gz
 RUN pip3 install waybackpy
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
 
+RUN wget --no-check-certificate -c https://github.com/Findomain/Findomain/releases/download/4.0.1/findomain-linux
+RUN chmod +x findomain-linux
 
+RUN wget --no-check-certificate -c https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+RUN tar -xzvf aquatone_*.zip
+RUN rm aquatone_*.zip
 
+RUN wget --no-check-certificate -c https://github.com/ffuf/ffuf/releases/download/v1.2.1/ffuf_1.2.1_linux_amd64.tar.gz
+RUN tar -xzvf ffuf_*.tar.gz
+RUN rm aquatone_*.tsr.gz
+
+RUN git clone https://github.com/devanshbatham/ParamSpider
+RUN pip3 install -r ParamSpider/requirements.txt
 
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
