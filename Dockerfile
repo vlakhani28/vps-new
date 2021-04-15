@@ -55,6 +55,8 @@ RUN git clone https://github.com/nahamsec/bbht.git
 RUN chmod +x bbht/install.sh
 RUN ./bbht/install.sh
 
+RUN go get -u github.com/ffuf/ffuf
+
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/nuclei/releases/download/v2.3.4/nuclei_2.3.4_linux_amd64.tar.gz
 RUN tar -xzvf nuclei_*.tar.gz
 RUN mv nuclei /usr/local/bin/nuclei
