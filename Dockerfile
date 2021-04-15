@@ -53,7 +53,7 @@ RUN export PATH=$PATH:/usr/local/go/bin
 #Add all commands to install a file using GO over here
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/nuclei/releases/download/v2.3.4/nuclei_2.3.4_linux_amd64.tar.gz
 RUN tar -xzvf nuclei_*.tar.gz
-RUN mv httpx /usr/local/bin/nuclei
+RUN mv nuclei /usr/local/bin/nuclei
 
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/httpx/releases/download/v1.0.5/httpx_1.0.5_linux_amd64.tar.gz
 RUN tar -xvf httpx_*.tar.gz
