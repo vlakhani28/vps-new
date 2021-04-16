@@ -1,6 +1,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-# FREE Lifetime VPS with Bug Bounty Tools preinstalled
+# FREE VPS with preinstalled Bug Bounty Tools!
 
 ### Features:
   - Works for straight 12 hours
@@ -48,17 +48,21 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 ### Installation
 - Create an account on Heroku
 - Click on Deployment Button
-- Give a name to your application
+- Give a name to your application and click on "Deploy App"
 - Sit Back! Relax for 15-20 mins while it sets up
+- Go to app_name.herokuapp.com
+- Click on "Connect" in top right corner
 - BOOM!! Your Free VPS is ready to go!
 
 ### Limitation(s)
 - Your work does not get saved, so save it on cloud like GDrive
 - GOLang is pre downloaded and extracted, the path is not set You have to run the following command: export PATH=$PATH:/usr/local/go/bin
+- Add telegram notifications
+- 
 
 ### To-Do(s)
 - Find a working solution for Go so that it gets pre-installed
 - Add Mounting/Unmounting of GDrive 
 - Add more tools (Twitter DM me if you want any tools to be added https://twitter.com/vlakhani28)
 
-The orignal code is  megatron0000/heroku-vnc, I just modified it a bit to make this set up as Bug Bounty Hunting.
+##### Note: The orignal code is  megatron0000/heroku-vnc, I just modified it a bit to make this set up for Bug Bounty Hunting.
