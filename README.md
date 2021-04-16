@@ -55,8 +55,9 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 - BOOM!! Your Free VPS is ready to go!
 
 ### Limitation(s)
-- Your work does not get saved, so save it on cloud like GDrive
-- GOLang is pre downloaded and extracted, the path is not set You have to run the following command: export PATH=$PATH:/usr/local/go/bin
+- If left untouched for 30-45 minutes, it gets reset. 
+- Your work does not get saved, so save it on cloud like GDrive or you can use UptimeRobot(https://uptimerobot.com/) which will ping your website so the website does not get reset in 30 minutes.
+- GOLang is pre downloaded and extracted, the path is not set. In order to set it, you need to run the following command: export PATH=$PATH:/usr/local/go/bin
 
 ### To-Do(s)
 - Find a working solution for Go so that it gets pre-installed
