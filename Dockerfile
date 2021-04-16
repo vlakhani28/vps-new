@@ -58,9 +58,9 @@ RUN dpkg-reconfigure locales
 # RUN export PATH=$PATH:/usr/local/go/bin
 
 
-RUN git clone https://github.com/vlakhani28/bug-bounty-tools.git
-RUN chmod +x bug-bounty-tools/install.sh
-RUN ./bug-bounty-tools/install.sh
+RUN git clone https://github.com/vlakhani28/bbht.git
+RUN chmod +x bbht/install.sh
+RUN ./bbht/install.sh
 
 
 
