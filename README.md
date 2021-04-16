@@ -6,7 +6,7 @@
   - Works for straight 12 hours
   - Upto 100 Mbps of Internet
   - Running on Ubuntu 18.04 Docker Image
-  - Google Chrome included
+  - Chromium and Firefox Included
   - Bug Bounty Tools Included
   - Easy to use
   - Customizable
