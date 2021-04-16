@@ -59,7 +59,6 @@ RUN mkdir -p ~/go_projects/{bin,src,pkg}
 RUN export  PATH=$PATH:/usr/local/go/bin
 RUN echo "export GOPATH='$HOME/go_projects'" | tee -a ~/bash_profile
 RUN echo "export GOBIN='$GOPATH/bin'" | tee -a ~/bash_profile
-RUN source ~/.bash_profile
 RUN go version
 
 RUN git clone https://github.com/nahamsec/bbht.git
