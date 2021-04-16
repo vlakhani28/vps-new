@@ -42,6 +42,7 @@
 - ffuf
 - ParamSpider
 
+### Note: All tools can be found in directory root/tools
 Special thanks to nahamsec for his bbht script which can be found here https://github.com/nahamsec/bbht
 
 ### Installation
@@ -57,7 +58,6 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 - Your work does not get saved, so save it on cloud like GDrive
 - GOLang is pre downloaded and extracted, the path is not set You have to run the following command: export PATH=$PATH:/usr/local/go/bin
 - Add telegram notifications
-- 
 
 ### To-Do(s)
 - Find a working solution for Go so that it gets pre-installed
