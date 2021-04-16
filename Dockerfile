@@ -53,13 +53,10 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN wget --no-check-certificate -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz 
+RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xvzf go1.*.tar.gz
-RUN mkdir -p ~/go_projects/{bin,src,pkg}
-RUN export  PATH=$PATH:/usr/local/go/bin
-RUN echo "export GOPATH='$HOME/go_projects'" | tee -a ~/bash_profile
-RUN echo "export GOBIN='$GOPATH/bin'" | tee -a ~/bash_profile
-RUN go version
+RUN export PATH=$PATH:/usr/local/go/bin
+
 
 RUN git clone https://github.com/nahamsec/bbht.git
 RUN chmod +x bbht/install.sh
