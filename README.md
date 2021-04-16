@@ -35,7 +35,6 @@
 - Asnlookup
 - Unfurl
 - Waybackurls
-- Httprobe
 - Seclists collection
 - httpx
 - findomain
