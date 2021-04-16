@@ -72,6 +72,7 @@ RUN wget --no-check-certificate -c https://github.com/projectdiscovery/httpx/rel
 RUN tar -xvf httpx_*.tar.gz
 RUN mv httpx /usr/local/bin/httpx
 RUN rm httpx_1.0.5_linux_amd64.tar.gz
+RUN rm README.md
 RUN pip3 install waybackpy
 RUN git clone https://github.com/projectdiscovery/nuclei-templates.git
 
@@ -86,7 +87,7 @@ RUN rm README.md
 RUN wget --no-check-certificate -c https://github.com/ffuf/ffuf/releases/download/v1.2.1/ffuf_1.2.1_linux_amd64.tar.gz
 RUN tar -xzvf ffuf_*.tar.gz
 RUN rm ffuf_*.tar.gz
-RUN rm README.md
+
 
 RUN git clone https://github.com/devanshbatham/ParamSpider
 RUN pip3 install -r ParamSpider/requirements.txt
