@@ -57,11 +57,11 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 ### Limitation(s)
 - Your work does not get saved, so save it on cloud like GDrive
 - GOLang is pre downloaded and extracted, the path is not set You have to run the following command: export PATH=$PATH:/usr/local/go/bin
-- Add telegram notifications
 
 ### To-Do(s)
 - Find a working solution for Go so that it gets pre-installed
 - Add Mounting/Unmounting of GDrive 
+- Add telegram notifications
 - Add more tools (Twitter DM me if you want any tools to be added https://twitter.com/vlakhani28)
 
 ##### Note: The orignal code is https://github.com/RixEtte/heroku-vnc, I just modified it a bit to make this set up for Bug Bounty Hunting.
