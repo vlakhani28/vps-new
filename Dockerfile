@@ -67,7 +67,6 @@ RUN wget --no-check-certificate -c https://github.com/projectdiscovery/nuclei/re
 RUN tar -xzvf nuclei_*.tar.gz
 RUN mv nuclei /usr/local/bin/nuclei
 RUN rm nuclei_2.3.4_linux_amd64.tar.gz
-RUN rm README.md
 
 RUN wget --no-check-certificate -c https://github.com/projectdiscovery/httpx/releases/download/v1.0.5/httpx_1.0.5_linux_amd64.tar.gz
 RUN tar -xvf httpx_*.tar.gz
