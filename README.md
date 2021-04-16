@@ -65,4 +65,4 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 - Add Mounting/Unmounting of GDrive 
 - Add more tools (Twitter DM me if you want any tools to be added https://twitter.com/vlakhani28)
 
-##### Note: The orignal code is  megatron0000/heroku-vnc, I just modified it a bit to make this set up for Bug Bounty Hunting.
+##### Note: The orignal code is https://github.com/RixEtte/heroku-vnc, I just modified it a bit to make this set up for Bug Bounty Hunting.
