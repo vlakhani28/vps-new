@@ -54,6 +54,8 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 - Click on "Connect" in top right corner
 - BOOM!! Your Free VPS is ready to go!
 
+### Video: https://drive.google.com/file/d/1Q5Ge-2IQohLNQHkoyPkHdKenlCq9z712/view?usp=sharing
+
 ### Limitation(s)
 - If left untouched for 30-45 minutes, it gets reset. 
 - Your work does not get saved, so save it on cloud like GDrive or you can use UptimeRobot(https://uptimerobot.com/) which will ping your website so the website does not get reset in 30 minutes.
