@@ -53,9 +53,7 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
-RUN tar -C /usr/local -xvzf go1.*.tar.gz
-RUN export PATH=$PATH:/usr/local/go/bin
+RUN wget -q -O - https://git.io/vQhTU | bash
 
 
 RUN git clone https://github.com/vlakhani28/bbht.git
