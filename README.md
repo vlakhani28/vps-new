@@ -68,8 +68,8 @@
 - JHaddix Wordlist
 - Nahamsec Wordlist
 
-### Note: All tools can be found in directory root/tools
-Special thanks to nahamsec for his bbht script which can be found here https://github.com/nahamsec/bbht
+#### Note: All tools can be found in directory root/tools
+#### Special thanks to nahamsec for his bbht script which can be found here https://github.com/nahamsec/bbht
 
 ### Installation
 - Create an account on Heroku
@@ -82,10 +82,10 @@ Special thanks to nahamsec for his bbht script which can be found here https://g
 
 ### Installation Video: https://drive.google.com/file/d/1Q5Ge-2IQohLNQHkoyPkHdKenlCq9z712/view?usp=sharing
 
-### Note 1 : GOLang is pre downloaded and extracted, the path is not set. In order to set it, you need to run the following command: export PATH=$PATH:/usr/local/go/bin
-### I have made a script "run-after-go.sh", run this once GO path gets set and all necessary tools made in GOLang will be installed.
+#### Note 1 : GOLang is pre downloaded and extracted, the path is not set. In order to set it, you need to run the following command: export PATH=$PATH:/usr/local/go/bin
+#### I have made a script "run-after-go.sh", run this once GO path gets set and all necessary tools made in GOLang will be installed.
 
-### Note 2 : You cannot install tools using terminal. To install any tool fork my repo: https://github.com/vlakhani28/bbht and add/delete tools you want to. Remember to change Line Number 61 in Dockerfile of the repo "vps-new" and add the link of newly forked repository.
+#### Note 2 : You cannot install tools using terminal. To install any tool fork my repo: https://github.com/vlakhani28/bbht and add/delete tools you want to. Remember to change Line Number 61 in Dockerfile of the repo "vps-new" and add the link of newly forked repository.
 
 ### Limitation(s)
 - If left untouched for 30-45 minutes, it gets reset. 
