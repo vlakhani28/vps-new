@@ -41,6 +41,32 @@
 - aquatone
 - ffuf
 - ParamSpider
+- subfinder
+- massDNS
+- subDomainizer
+- knockpy
+- subbrute
+- GittyLeaks
+- Asset Finder
+- Amass
+- SecretX
+- LinkFinder
+- Subjack
+- GoBuster
+- XEEinjector
+- XSRFProbe
+- XSStrike
+- Open Redirect Scanner
+- NMap
+- HTTProbe
+- Wa00f
+- gau
+- BountyIt
+- dalfox
+- gf
+- subzy
+- JHaddix Wordlist
+- Nahamsec Wordlist
 
 ### Note: All tools can be found in directory root/tools
 Special thanks to nahamsec for his bbht script which can be found here https://github.com/nahamsec/bbht
