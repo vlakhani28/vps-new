@@ -99,3 +99,5 @@
 - Add more tools (Twitter DM me if you want any tools to be added https://twitter.com/vlakhani28)
 
 ##### Note: The orignal code is https://github.com/RixEtte/heroku-vnc, I just modified it a bit to make this set up for Bug Bounty Hunting.
+
+### As per the new policies of Heroku, you are not allowed to deploy VMs and can result into account ban.
