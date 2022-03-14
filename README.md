@@ -1,9 +1,8 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fkav31289%2Frailwayv)
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fvlakhani28%2Fvps-new)
 # FREE VPS with preinstalled Bug Bounty Tools!
 
-### As per the new policies of Heroku, you are not allowed to deploy VMs and can result into account ban.
 
 
 ### Features:
