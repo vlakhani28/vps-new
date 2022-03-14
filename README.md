@@ -1,8 +1,9 @@
 
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fvlakhani28%2Fvps-new)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 # FREE VPS with preinstalled Bug Bounty Tools!
 
+### This no longer works due to updates in Heroku Terms and Services! Working on an alternative :)
 
 
 ### Features:
